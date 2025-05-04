@@ -325,6 +325,12 @@ nav ul li a:hover::after {
     transform: translateY(-2px);
 }
 
+.project-links {
+    display: flex;
+    gap: var(--space-sm);
+    margin-top: auto;
+}
+
 .project-card .btn {
     display: inline-block;
     background-color: var(--electric-blue);
@@ -334,15 +340,25 @@ nav ul li a:hover::after {
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s;
-    margin-top: auto;
     border: none;
     cursor: pointer;
-    align-self: flex-start;
+}
+
+.project-card .btn-secondary {
+    background-color: transparent;
+    color: var(--electric-blue);
+    border: 1px solid var(--electric-blue);
 }
 
 .project-card .btn:hover {
     background-color: #0099cc;
     transform: translateY(-2px);
+}
+
+.project-card .btn-secondary:hover {
+    background-color: rgba(0, 191, 255, 0.1);
+    color: #0099cc;
+    border-color: #0099cc;
 }
 
 /* Project card styles continued */
