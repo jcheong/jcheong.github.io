@@ -15,6 +15,8 @@
     --dark-gray: #1E1E1E;
     --white: #FFFFFF;
     --electric-blue: #00BFFF;
+    --light-gray-bg: #f0f0f0; /* Added for page background */
+    --light-gray-element-bg: #e9e9e9; /* Added for element backgrounds like skills */
 
     /* Typography */
     --heading-font: 'Space Grotesk', sans-serif;
@@ -32,7 +34,7 @@ body {
     font-family: var(--body-font);
     line-height: 1.6;
     color: var(--black);
-    background-color: var(--white);
+    background-color: var(--light-gray-bg); /* Changed to light grey */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -271,7 +273,7 @@ nav ul li a:hover::after {
 
 .project-card p {
     margin-bottom: var(--space-sm);
-    color: var(--dark-gray);
+    color: var(--black); /* Changed to black */
 }
 
 .project-card .features-list {
@@ -289,7 +291,7 @@ nav ul li a:hover::after {
     margin-bottom: 6px;
     font-size: 0.9rem;
     line-height: 1.4;
-    color: var(--dark-gray);
+    color: var(--black); /* Changed to black */
     display: flex;
     align-items: flex-start;
 }
@@ -401,7 +403,7 @@ nav ul li a:hover::after {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    color: var(--dark-gray);
+    color: var(--black); /* Changed to black */
 }
 
 .social-links {
@@ -497,4 +499,58 @@ footer {
         margin-left: var(--space-sm);
         margin-right: var(--space-sm);
     }
+}
+
+/* Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skill-category {
+    background-color: #f9f9f9; /* Light background for category block */
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.skill-category h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #333; /* Darker heading for category */
+    border-bottom: 2px solid var(--electric-blue); /* Accent color border */
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.skills-list-horizontal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; /* Consistent with project tech-stack */
+    margin-top: 1rem; /* Add some space below the category heading */
+}
+
+.skill-item {
+    background-color: var(--light-gray-element-bg); /* Changed to light grey background */
+    color: var(--black); /* Changed to black text */
+    padding: 4px 8px; /* Matched to tech-stack */
+    border-radius: 4px; /* Consistent with project tech-stack */
+    font-size: 0.8rem; /* Matched to tech-stack */
+    font-weight: 500; /* Consistent with project tech-stack */
+    display: inline-flex; /* For icon alignment */
+    align-items: center; /* Vertically align icon and text */
+    transition: all 0.3s; /* Consistent with project tech-stack */
+}
+
+.skill-item:hover {
+    background-color: var(--dark-gray); /* Darker background on hover */
+    color: var(--white); /* White text on hover */
+    transform: translateY(-2px); /* Consistent with project tech-stack */
+}
+
+/* Adjusting section padding if needed */
+#skills.section {
+    padding: 4rem 0; /* This matches var(--space-lg) */
 }
